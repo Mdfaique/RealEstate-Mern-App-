@@ -27,7 +27,6 @@ function SignUp() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log(data);
 
       if (data.success === false) {
         setLoading(false);
@@ -41,7 +40,6 @@ function SignUp() {
       setLoading(false);
       setError(error.message);
     }
-    // console.log(formData);
   };
 
   return (
@@ -73,7 +71,7 @@ function SignUp() {
           disabled={loading}
           className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
         >
-          {loading ? "Loading..." : "SIgnup"}
+          {loading ? "Loading..." : "Sign Up"}
         </button>
       </form>
       <div className="flex gap-2 mt-5">
